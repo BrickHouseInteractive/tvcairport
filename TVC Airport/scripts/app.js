@@ -20,7 +20,8 @@ angular.module('tvcairport', ['ngRoute','ngAnimate','ngSanitize','configuration'
 
 	$sceDelegateProvider.resourceUrlWhitelist([
 	    'self',
-	    'http://fvmobile.flightview.com/**'
+	    'http://fvmobile.flightview.com/**',
+	    'https://www.google.com/maps/**'
 	])
 })
 .config(['$compileProvider', function($compileProvider) {

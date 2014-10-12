@@ -64,8 +64,10 @@ h3 a{
 }
 
 #wrapper{
+    padding:43px 0 55px 0;
 	width:100%;
     height:100%;
+    position:absolute;
 }
 
 #main{
@@ -122,13 +124,6 @@ h3 a{
     width:100%;
 }
 /*Body*/
-.page{
-	top:0;
-	left:0;
-    overflow-x:hidden;
-    width:100%;
-    padding:43px 0 60px 0;
-}
 .page-padding{
     padding:5%;
 }
@@ -430,9 +425,6 @@ iframe{
         color:#fff;
         font-size:1em;
         text-align:center;
-    }
-    .page{
-        padding:60px 0 80px 0;
     }
     button{
         width:45%;
