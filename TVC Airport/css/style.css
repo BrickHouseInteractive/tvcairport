@@ -5,7 +5,8 @@
 *{
 	margin:0;
 	padding:0;
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    box-sizing:border-box; 
 }
 
 html{
@@ -65,8 +66,6 @@ h3 a{
 #wrapper{
 	width:100%;
     height:100%;
-	overflow:hidden;
-	position:absolute;
 }
 
 #main{
@@ -96,7 +95,7 @@ h3 a{
 }
 /*Header/Menu*/
 #menu{
-    position:absolute;
+    position:fixed;
     bottom:0;
     width:100%;
     box-shadow: 0 -2px #222;
@@ -109,13 +108,14 @@ h3 a{
 }
 #header{
     width:100%;
-    position:absolute;
+    position:fixed;
     top:0;
     left:0;
     box-shadow: 0 2px #222;
     z-index:999;
     background: url(../img/wood-repeat.jpg) center top repeat;
 }
+
 #title-container{
     position:relative;
     padding:10px 0;
@@ -123,12 +123,14 @@ h3 a{
 }
 /*Body*/
 .page{
-	position:absolute;
 	top:0;
 	left:0;
     overflow-x:hidden;
-    width:94%;
-    margin:0 3%;
+    width:100%;
+    padding:43px 0 60px 0;
+}
+.page-padding{
+    padding:5%;
 }
 #home{
     height:100%;
@@ -145,14 +147,24 @@ h3 a{
 }
 
 .center{
-
 	text-align:center;
-
 }
 
 .center-margin{
     margin:0 auto;
 	display:block;
+}
+
+/* Page Menus */
+.page-menu-item{
+    font-size:1.3em;
+    font-family:arial;
+    color:#005595;
+    padding:0.7em 3%;
+    margin:0;
+    width:100%;
+    display:block;
+    border-bottom:1px solid #ccc;
 }
 
 hr{
@@ -250,18 +262,8 @@ button:hover{
 }
 iframe{
     border:none;
-    min-height:75%;
+    min-height:100%;
     width:100%;
-    padding-bottom:15px;
-}
-#nav h3{
-    font-size:1.3em;
-	font-family:arial;
-    color:#005595;
-	padding:0.7em 3%;
-	margin:0;
-	width:94%;
-	border-bottom:1px solid #ccc;
 }
 #nav ul{
 	display:none; 
@@ -349,7 +351,6 @@ iframe{
         background-size:100% auto;
     }
     #menu{
-        height:50px;
         padding:5px 0 2px 0;
     }
     #menu .menu-item, #back-button{
@@ -363,9 +364,6 @@ iframe{
         color:#fff;
         font-size:.55em;
         text-align:center;
-    }
-    .page{
-        padding:45px 0 60px 0;
     }
     button, button{
     	width:70%;
@@ -403,7 +401,6 @@ iframe{
         background-size:100% auto;
     }
     #menu{
-        height:75px;
         padding:8px 0 2px 0;
     }
     #menu .menu-item, #back-button{

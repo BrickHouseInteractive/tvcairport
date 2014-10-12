@@ -1,10 +1,42 @@
 {
+	"":{
+		"title":"Home",
+		"menu":"home"
+	},
 	"/":{
 		"title":"Home",
 		"menu":"home"
-		},
+	},
 	"/flights":{
 		"title":"Flights",
 		"menu":"flights"
-		}
+	},
+	"/frame/arrivals":{
+		"title":"Arrivals",
+		"menu":"flights",
+		"url":"http://fvmobile.flightview.com/tvcairport/FidsArrival.aspx"
+	},
+	"/frame/departures":{
+		"title":"Departures",
+		"menu":"flights",
+		"url":"http://fvmobile.flightview.com/tvcairport/FidsDeparture.aspx"
+	},
+	"/frame/flight":{
+		"title":"Track by Flight",
+		"menu":"flights",
+		"url":"http://fvmobile.flightview.com/tvcairport/TrackByFlight.aspx"
+	},
+	"/frame/route":{
+		"title":"Track by Route",
+		"menu":"flights",
+		"url":"http://fvmobile.flightview.com/tvcairport/TrackByRoute.aspx"
+	},
+	"/info":{
+		"title":"Information",
+		"menu":"info"
+	},
+	"/info/airlines":{
+		"title":"Airlines",
+		"menu":"info"
+	}
 }
