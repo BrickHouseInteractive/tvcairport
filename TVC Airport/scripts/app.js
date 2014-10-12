@@ -4,9 +4,7 @@ angular.module('configuration', []);
 angular.module('tvcairport', ['ngRoute','ngAnimate','ngSanitize','configuration'])
 .config(function ($routeProvider, $sceDelegateProvider) {
 	$routeProvider
-	.when('/', {
-		templateUrl: 'views/home.html'
-	}).when('/flights', {
+	.when('/flights', {
 		templateUrl: 'views/flights-menu.html'
 	}).when('/info', {
 		templateUrl: 'views/info-menu.html'
@@ -16,6 +14,8 @@ angular.module('tvcairport', ['ngRoute','ngAnimate','ngSanitize','configuration'
 	}).when('/info/:page', {
 		templateUrl: 'views/info.html',
 		controller: 'InfoCtrl'
+	}).otherwise({
+		templateUrl: 'views/home.html'
 	})
 
 	$sceDelegateProvider.resourceUrlWhitelist([

@@ -7,7 +7,7 @@ angular.module('tvcairport').controller('MainCtrl', ['$scope','$rootScope','$loc
 
     	//---Functions--//
     	$scope.setPageInfo = function(){
-    		$scope.showTitle = $location.path() != "/";
+    		$scope.showTitle = $location.path() != "/" && $location.path() != "";
     		console.log("route: " + $location.path());
 			if($scope.pageData){
 				if($scope.showTitle) $scope.pageTitle = $scope.pageData[$location.path()].title;

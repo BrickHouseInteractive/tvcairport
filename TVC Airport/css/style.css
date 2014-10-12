@@ -133,10 +133,13 @@ h3 a{
     padding:5%;
 }
 #home{
+    position:absolute;
     height:100%;
     width:100%;
     margin:0;
     padding:0;
+    top:0;
+    left:0;
 }
 .section, .row-fluid{
 	margin:15px 0;
