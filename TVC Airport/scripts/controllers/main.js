@@ -30,5 +30,12 @@ angular.module('tvcairport').controller('MainCtrl', ['$scope','$rootScope','$loc
 		    $scope.pageData = data;
 		    $scope.setPageInfo();
 		  })
+
+		document.addEventListener("click", function(event){
+			if(event.target.localName == "a" && event.target.target == "_blank"){
+				console.log(event.target);
+				 window.open(event.target.href, '_blank', 'location=yes');
+			}
+		})
 	}
 ])
