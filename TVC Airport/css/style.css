@@ -125,7 +125,7 @@ h3 a{
 }
 /*Body*/
 .page-padding{
-    padding:5%;
+    padding:5% 5% 60px 5%;
 }
 #home{
     position:absolute;
