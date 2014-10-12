@@ -168,6 +168,19 @@ h3 a{
     width:100%;
     display:block;
     border-bottom:1px solid #ccc;
+    position:relative;
+}
+.arrow-right {
+    width: 0; 
+    height: 0; 
+    border-top: 0.3em solid transparent;
+    border-bottom: 0.3em solid transparent;
+    border-left: 0.3em solid #005595;
+    position:absolute;
+    top:0;
+    bottom:0;
+    right:5%;
+    margin:auto;
 }
 
 hr{
