@@ -39,9 +39,20 @@
 		"title":"Airlines",
 		"menu":"info"
 	},
-	"/frame/maps-directions":{
-		"title": "Maps & Directions",
-		"menu":"info",
-		"url": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2834.153111082019!2d-85.57958699999999!3d44.736892999999995!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x881fcd125b902ba9%3A0xfff72872bdc528ed!2sCherry+Capital+Airport!5e0!3m2!1sen!2sus!4v1413077738967"
+	"/info/facilities":{
+		"title":"Airport Facilities",
+		"menu":"info"
+	},
+	"/info/ground-transport":{
+		"title":"Ground Transportation",
+		"menu":"info"
+	},
+	"/info/security":{
+		"title":"Security & Travel Tips",
+		"menu":"info"
+	},
+	"/info/parking":{
+		"title":"Parking Map & Rates",
+		"menu":"info"
 	}
 }
