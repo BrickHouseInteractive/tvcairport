@@ -28,7 +28,8 @@
     "org.apache.cordova.inappbrowser",
     "org.apache.cordova.media",
     "org.apache.cordova.network-information",
-    "org.apache.cordova.splashscreen"
+    "org.apache.cordova.splashscreen",
+    "com.phonegap.plugins.sqlite"
   ],
   "AndroidPermissions": [
     "android.permission.ACCESS_COARSE_LOCATION",
