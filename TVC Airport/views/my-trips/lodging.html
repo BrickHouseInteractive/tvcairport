@@ -1,0 +1,62 @@
+<div class="center section">
+    <div ng-repeat="d in trip.lodging" class="flight-leg">
+        <hr ng-show="$index != 0"/>
+        <div class="flight-section">
+            <p>Lodging Name <span ng-click="removeTripSection('lodging', $index)" ng-show="$index != 0" class="icon-right delete-section">X</span></p>
+            <input ng-model="d.company" type="text" />
+        </div>
+         <div class="flight-section">
+            <p>Phone Number</p>
+            <input ng-model="d.phone" type="text" />
+        </div>
+        <div class="flight-section">
+            <p>Confirmation Number</p>
+            <input ng-model="d.confirmation" type="text" />
+        </div>
+        <div class="flight-section">
+            <p>Check-In Location</p>
+            <input ng-model="d.location" type="text" />
+        </div>
+        <div class="flight-section">
+            <p>Check-In Date/Time</p>
+            <input ng-model="d.checkInDate" type="text" />
+            <select ng-model="d.checkInHour" class="hour">
+                 <option value="">Hour</option>
+                 
+            </select>
+            <select ng-model="d.checkInMin" class="min">
+                 <option value="">Min</option>
+                 
+            </select>
+            <select ng-model="d.checkInAmPm">
+            	<option value="">am/pm</option>
+                 <option value="am">am</option>                   
+                 <option value="pm">pm</option>
+            </select>
+        </div>
+        <div class="flight-section">
+            <p>Check-Out Date/Time</p>
+            <input ng-model="d.checkOutDate" type="text" />
+            <select ng-model="d.checkOutHour" class="hour">
+                 <option value="">Hour</option>
+            </select>
+            <select ng-model="d.checkOutMin" class="min">
+                 <option value="">Min</option>
+            </select>
+            <select ng-model="d.checkOutAmPm">
+                <option value="">am/pm</option>
+                 <option value="am">am</option>                   
+                 <option value="pm">pm</option>
+            </select>
+        </div>
+        <div class="flight-section">
+            <p>Notes</p>
+            <textarea ng-model="d.notes"></textarea>
+        </div>
+    </div>
+    <p class="add-button" ng-click="addTripSection('lodging')">+ Add Connection</p>
+</div>
+<hr/>
+<div class="center section">
+	<a href="#my-trips/other" ng-click="saveTrip()"><button class="save">Next</button></a>
+</div>
