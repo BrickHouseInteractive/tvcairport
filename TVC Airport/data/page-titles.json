@@ -7,6 +7,7 @@
 		"title":"Home",
 		"menu":"home"
 	},
+	
 	"/flights":{
 		"title":"Flights",
 		"menu":"flights"
@@ -31,6 +32,7 @@
 		"menu":"flights",
 		"url":"http://fvmobile.flightview.com/tvcairport/TrackByRoute.aspx"
 	},
+
 	"/info":{
 		"title":"Information",
 		"menu":"info"
@@ -54,5 +56,38 @@
 	"/info/parking":{
 		"title":"Parking Map & Rates",
 		"menu":"info"
+	},
+
+	"/my-trips":{
+		"title":"My Trips",
+		"menu":"my-trips"
+	},
+	"/my-trips/trip-name":{
+		"title":"My Trip",
+		"menu":"my-trips"
+	},
+	"/my-trips/flight-info":{
+		"title":"Flight Information",
+		"menu":"my-trips"
+	},
+	"/my-trips/departure":{
+		"title":"Departure Flight",
+		"menu":"my-trips"
+	},
+	"/my-trips/return":{
+		"title":"Return Flight",
+		"menu":"my-trips"
+	},
+	"/my-trips/car":{
+		"title":"Rental Car",
+		"menu":"my-trips"
+	},
+	"/my-trips/lodging":{
+		"title":"Lodging",
+		"menu":"my-trips"
+	},
+	"/my-trips/other":{
+		"title":"Other Information",
+		"menu":"my-trips"
 	}
 }

@@ -1,0 +1,14 @@
+<div class="page">
+    <p ng-click="newTrip()" id="add-trip">+ Add Trip</p>
+    <hr/>
+    <div ng-repeat="trip in trips" class="my-trips">
+    	<p>
+    		<b><a href="#trip-sum" class="my-trip-sum">
+    			<span ng-show="trip.tripName != ''">{{trip.data.tripName}}</span>
+    			<span ng-show="trip.tripName == ''">Untitled Trip</span>
+    		</a></b>
+    		<img class="my-trip-delete icon-right" src="img/delete-icon.png">
+    		<img ng-click="editTrip(trip)" class="my-trip-edit icon-right" src="img/edit-icon.png">
+    	</p>
+    </div>
+</div>

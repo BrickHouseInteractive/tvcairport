@@ -1,0 +1,44 @@
+<div class="center section">
+    <div ng-repeat="d in trip.return" class="flight-leg">
+        <hr ng-show="$index != 0"/>
+        <div class="flight-section">
+            <p>Airline Name <span ng-click="removeTripSection('return', $index)" ng-show="$index != 0" class="icon-right delete-section">X</span></p>
+            <input ng-model="d.airline" type="text" />
+        </div>
+         <div class="flight-section">
+            <p>From</p>
+            <input ng-model="d.from" type="text" />
+        </div>
+        <div class="flight-section">
+            <p>To</p>
+            <input ng-model="d.to" type="text" />
+
+        </div>
+        <div class="flight-section">
+            <p>Flight Date/Time</p>
+            <input ng-model="d.date" type="text" />
+            <select ng-model="d.hour" class="hour">
+                 <option value="">Hour</option>
+                 
+            </select>
+            <select ng-model="d.min" class="min">
+                 <option value="">Min</option>
+                 
+            </select>
+            <select ng-model="d.ampm">
+            	<option value="">am/pm</option>
+                 <option value="am">am</option>                   
+                 <option value="pm">pm</option>
+            </select>
+        </div>
+        <div class="flight-section">
+        <p>Notes</p>
+            <textarea ng-model="d.notes"></textarea>
+        </div>
+    </div>
+    <p class="add-button" ng-click="addTripSection('return')">+ Add Connection</p>
+</div>
+<hr/>
+<div class="center section">
+	<a href="#my-trips/car" ng-click="saveTrip()"><button class="save" data-section="edit" data-name="depart">Next</button></a>
+</div>

@@ -1,9 +1,9 @@
-angular.module('tvcairport').controller('MainCtrl', ['$scope','$rootScope','$location','$timeout', '$http', 
-	function ($scope, $rootScope, $location, $timeout, $http){
+angular.module('tvcairport').controller('MainCtrl', ['$scope','$rootScope','$location','$timeout', '$http', 'MyTrips',
+	function ($scope, $rootScope, $location, $timeout, $http, MyTrips){
 		
 		//------Vars-----//
     	$scope.menuItem = "home";
-
+    	$rootScope.savingTrip = false;
 
     	//---Functions--//
     	$scope.setPageInfo = function(){
@@ -21,6 +21,8 @@ angular.module('tvcairport').controller('MainCtrl', ['$scope','$rootScope','$loc
 
 
     	//------Init-----//
+    	MyTrips.initDB();
+    	
     	$scope.$on('$routeChangeStart', function(next, current) { 
 			$scope.setPageInfo()
     	})

@@ -1,0 +1,12 @@
+<div class="page" ng-controller="TripsCtrl">
+	<div id="wizard">
+        <a ng-href="#my-trips/trip-name" ng-class="{'wizard-current': currentPage == 'trip-name' }" class="wizard-icon" style="background-position:0 0"></a>
+        <a ng-href="#my-trips/flight-info" ng-class="{'wizard-current': currentPage == 'flight-info' }"  class="wizard-icon" style="background-position:-30px 0"></a>
+        <a ng-href="#my-trips/departure" ng-class="{'wizard-current': currentPage == 'departure' }" class="wizard-icon" style="background-position:-60px 0"></a>
+        <a ng-href="#my-trips/return" ng-class="{'wizard-current': currentPage == 'return' }" class="wizard-icon" style="background-position:-90px 0"></a>
+        <a ng-href="#my-trips/car" ng-class="{'wizard-current': currentPage == 'car' }" class="wizard-icon" style="background-position:-120px 0"></a>
+        <a ng-href="#my-trips/lodging" ng-class="{'wizard-current': currentPage == 'lodging' }" class="wizard-icon" style="background-position:-150px 0"></a>
+        <a ng-href="#my-trips/other" ng-class="{'wizard-current': currentPage == 'other' }" class="wizard-icon" style="background-position:-180px 0"></a>
+    </div>
+	<div class="page-padding" ng-include="tripPage"></div>
+</div>

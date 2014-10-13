@@ -18,12 +18,23 @@
             <a ng-class="{'selected':menuItem == 'home'}" href="#" style="background-position:20% 0" class="menu-item">HOME</a>
             <a ng-class="{'selected':menuItem == 'info'}" href="#info" style="background-position:80% 0" class="menu-item">INFO</a>
             <a ng-class="{'selected':menuItem == 'flights'}" href="#flights" style="background-position:40% 0" class="menu-item">FLIGHTS</a>
-            <a ng-class="" href="#my-trips" style="background-position:0 0" class="menu-item">MY TRIPS</a>
+            <a ng-class="{'selected':menuItem == 'my-trips'}" href="#my-trips" style="background-position:0 0" class="menu-item">MY TRIPS</a>
+        </div>
+        <div class="loading" ng-show="savingTrip">
+            <p>Saving Content</p>
+            <div class="spinner">
+              <div class="rect1"></div>
+              <div class="rect2"></div>
+              <div class="rect3"></div>
+              <div class="rect4"></div>
+              <div class="rect5"></div>
+            </div>
         </div>
         <div ng-view id="wrapper" class="wrapper"></div>
 
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="bower_components/fastclick/lib/fastclick.js"></script>
+        <script type="text/javascript" src="scripts/prefixfree.min.js"></script>
         <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
         <!--Angular Components-->
         <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
@@ -35,5 +46,7 @@
         <script type="text/javascript" src="scripts/controllers/main.js"></script> 
         <script type="text/javascript" src="scripts/controllers/frame.js"></script> 
         <script type="text/javascript" src="scripts/controllers/info.js"></script> 
+        <script type="text/javascript" src="scripts/controllers/trips.js"></script> 
+        <script type="text/javascript" src="scripts/services/mytrips.js"></script> 
     </body>
 </html>
