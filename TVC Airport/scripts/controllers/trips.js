@@ -6,9 +6,19 @@ angular.module('tvcairport').controller('TripsCtrl', ['$scope','$rootScope','$ro
         $scope.type = $routeParams.type;
         $scope.tripPage = "views/my-trips/"+$routeParams.page+".html";
         $scope.trip = MyTrips.trip;
+        $scope.showDelete = false;
+        $scope.deleteTripObject = null;
         
 
         //---Functions--//
+        var getTrips = function(){
+             MyTrips.getTrips(function(trips){
+                $scope.$apply(function(){
+                     $scope.trips = trips;
+                })  
+            });
+        }
+
         $scope.newTrip = function(){
             MyTrips.newTrip(function(){
                $location.path("/my-trips/trip-name");
@@ -32,6 +42,13 @@ angular.module('tvcairport').controller('TripsCtrl', ['$scope','$rootScope','$ro
             $location.path("/my-trips/trip-name");
         }
 
+        $scope.deleteTrip = function(id){
+            MyTrips.deleteTrip(id, function(){
+                getTrips();
+            });
+            $scope.showDelete = false;
+        }
+
         $scope.addTripSection = function(section){
             var clone = angular.copy(MyTrips.trip[section][0]);
             angular.forEach(clone, function(value){
@@ -42,14 +59,18 @@ angular.module('tvcairport').controller('TripsCtrl', ['$scope','$rootScope','$ro
 
         $scope.removeTripSection = function(section, index){
             MyTrips.trip[section].splice(index, 1);
-        }       
+        } 
+
+        $scope.toggleDelete = function(trip){
+            $scope.showDelete = !$scope.showDelete;
+            if($scope.showDelete == true){
+                console.log(trip)
+                $scope.deleteTripObject = trip;
+            }
+        }      
 
         //------Init-----//
-        MyTrips.getTrips(function(trips){
-            $scope.$apply(function(){
-                 $scope.trips = trips;
-            })  
-        });
+        getTrips();
 
         if(Object.keys(MyTrips.trip).length == 0){
             $location.path("/my-trips");
