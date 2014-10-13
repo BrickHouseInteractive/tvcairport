@@ -47,8 +47,10 @@ angular.module('tvcairport').service('MyTrips', ['$http',
                   		cb();
                   	}.bind(this))
                   },
-                  editTrip: function(){
-
+                  deleteTrip: function(id, cb){
+                    this.db.transaction(function(transaction) { 
+                      transaction.executeSql('DELETE FROM TVC_Trip WHERE id=?;',[id], cb); 
+                    },this.errorCb,this.successCb);
                   },
                   initDB: function(){
                         // This alert is used to make sure the application is loaded correctly 

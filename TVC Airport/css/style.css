@@ -154,6 +154,9 @@ h3 a{
     border-bottom:1px solid #ccc;
     position:relative;
 }
+.page-menu-item:active{
+    background:#eee;
+}
 .arrow-right {
     width: 0; 
     height: 0; 
@@ -486,4 +489,20 @@ iframe{
   }  20% { 
     transform: scaleY(1.0);
   }
+}
+
+.overlay-button{
+    color:#fff;
+    border:2px solid #fff;
+    border-radius:5px;
+    padding:10px 0;
+    text-align:center;
+    margin:0 10px;
+    font-size: 1em;
+    display: inline-block;
+    width:80px;
+}
+.overlay-button:active{
+    color:#000;
+    background:#fff;
 }
