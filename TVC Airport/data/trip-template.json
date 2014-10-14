@@ -1,7 +1,12 @@
 {
-      "tripName":"",
-      "reservationNumber":"",
-      "parkAirport": "No",
+      "myTrip":{
+          "tripName":""  
+      },
+      "flightInfo":{
+           "reservationNumber":"",
+            "parkAirport": "",
+            "parkingSpace":"" 
+      },
       "departure":[
       	{
       		"airline":"",
@@ -61,5 +66,7 @@
       		"notes":""
       	}
       ],
-      "other": ""
+      "other":{
+           "notes":"" 
+      }
 }

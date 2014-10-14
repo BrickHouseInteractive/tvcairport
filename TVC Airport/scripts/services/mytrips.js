@@ -10,7 +10,7 @@ angular.module('tvcairport').service('MyTrips', ['$http',
                         if(this.id == "new"){ 
                           this.db.transaction(function(transaction) { 
                                   transaction.executeSql('INSERT INTO TVC_Trip(name, summary, data) VALUES (?,?,?)',
-                                    [trip.tripName,"",angular.toJson(trip)]);
+                                    [trip.myTrip.tripName,"",angular.toJson(trip)]);
                           },this.errorCb,this.successCb);
 
                           this.db.transaction(function(transaction) {
@@ -22,7 +22,7 @@ angular.module('tvcairport').service('MyTrips', ['$http',
                         }else{
                           this.db.transaction(function(transaction) {
                                   transaction.executeSql("UPDATE TVC_Trip SET name=?, summary=?, data=? WHERE id="+ self.id,
-                                    [trip.tripName,"",angular.toJson(trip)]);
+                                    [trip.myTrip.tripName,"",angular.toJson(trip)]);
                           },this.errorCb,cb);    
                         }
                   },

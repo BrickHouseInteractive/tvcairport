@@ -1,13 +1,8 @@
 {
-	"":{
-		"title":"Home",
-		"menu":"home"
-	},
 	"/":{
 		"title":"Home",
 		"menu":"home"
 	},
-	
 	"/flights":{
 		"title":"Flights",
 		"menu":"flights"

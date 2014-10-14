@@ -3,9 +3,9 @@
     <hr/>
     <div ng-repeat="trip in trips" class="my-trips">
     	<p>
-    		<b><a href="#trip-sum" class="my-trip-sum">
-    			<span ng-show="trip.tripName != ''">{{trip.data.tripName}}</span>
-    			<span ng-show="trip.tripName == ''">Untitled Trip</span>
+    		<b><a ng-click="viewTripSum(trip)" class="my-trip-sum">
+    			<span ng-show="trip.data.myTrip.tripName != ''">{{trip.data.myTrip.tripName}}</span>
+    			<span ng-show="trip.data.myTrip.tripName == ''">Untitled Trip</span>
     		</a></b>
     		<img ng-click="toggleDelete(trip)" class="my-trip-delete icon-right" src="img/delete-icon.png">
     		<img ng-click="editTrip(trip)" class="my-trip-edit icon-right" src="img/edit-icon.png">
@@ -13,7 +13,7 @@
     </div>
 </div>
 <div class="loading" ng-show="showDelete">
-    <p>Are you sure you want to delete<br/>"{{deleteTripObject.name}}"?</p>
+    <p>Are you sure you want to delete<br/>"{{deleteTripObject.data.myTrip.tripName}}"?</p>
     <div class="overlay-button" ng-click="deleteTrip(deleteTripObject.id)">Yes</div>
     <div class="overlay-button" ng-click="toggleDelete()">No</div>
 </div>

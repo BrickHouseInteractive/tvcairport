@@ -72,6 +72,7 @@ h3 a{
 	width:100%;
     height:100%;
     position:absolute;
+    overflow:scroll;
 }
 
 #main{
@@ -86,7 +87,7 @@ h3 a{
 
 /*Header/Menu*/
 #menu{
-    position:fixed;
+    position:absolute;
     bottom:0;
     width:100%;
     box-shadow: 0 -2px #222;
@@ -99,7 +100,7 @@ h3 a{
 }
 #header{
     width:100%;
-    position:fixed;
+    position:absolute;
     top:0;
     left:0;
     border-bottom: solid 2px #222;
@@ -114,7 +115,7 @@ h3 a{
 }
 /*Body*/
 .page-padding{
-    padding:5% 5% 70px 5%;
+    padding:0 5% 70px 5%;
 }
 #home{
     position:absolute;
@@ -321,13 +322,11 @@ iframe{
     float:left
 }
 .parking-top{
-    height:33%;
+    height:36%;
     width:100%;
     float:left
 }
 .marked{
-    width:100%;
-    height:100%;
     background:url(../img/map-marker.png) center center no-repeat;
 }
 .hidden, .offline-notification{
