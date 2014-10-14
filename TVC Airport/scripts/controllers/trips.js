@@ -67,7 +67,12 @@ angular.module('tvcairport').controller('TripsCtrl', ['$scope','$rootScope','$ro
                 console.log(trip)
                 $scope.deleteTripObject = trip;
             }
-        }      
+        } 
+
+        $scope.viewTripSum = function(trip){
+            MyTrips.trip = trip;
+            $location.path("trip-sum");
+        }     
 
         //------Init-----//
         getTrips();

@@ -3,40 +3,40 @@
         <h2 class="trip-section-title hidden"><div style="background-position:-30px" class="title-img"></div>Flight Information</h2>
         <div class="flight-section">
             <p>Reservation Number</p>
-            <input ng-model="trip.reservationNumber" class="flight-reservation" type="text" />
+            <input ng-model="trip.flightInfo.reservationNumber" class="flight-reservation" type="text" />
         </div>
         
         <div class="flight-section">
             <p>Did you park at TVC?</p>
-            <input id="parking-no"  type="radio" value="Yes" ng-model="trip.parkAirport"/> <label for="parking-yes"> Yes</label>
-            <input id="parking-yes"  type="radio" value="No" ng-model="trip.parkAirport"/><label for="parking-no"> No</label> 
+            <input id="parking-no"  type="radio" value="Yes" ng-model="trip.flightInfo.parkAirport"/> <label for="parking-yes"> Yes</label>
+            <input id="parking-yes"  type="radio" value="" ng-model="trip.flightInfo.parkAirport"/><label for="parking-no"> No</label> 
         </div>
-        <div ng-show="trip.parkAirport == 'No'" class="flight-section">
+        <div ng-show="trip.flightInfo.parkAirport == ''" class="flight-section">
             <p>Where did you park?</p>
             <textarea class="flight-park"></textarea>
         </div>
-        <div ng-show="trip.parkAirport == 'Yes'" class="flight-section">
+        <div ng-show="trip.flightInfo.parkAirport == 'Yes'" class="flight-section">
             <p>Tap the map approximately where you parked.</p>
             <div class="parking-map-container">
                 <div class="parking-top"></div>
                 <!--Row 1-->
                 <div class="parking-spacer"></div>
-                <div onclick="" class="parking-mark"></div>
-                <div onclick="" class="parking-mark"></div>
-                <div onclick="" class="parking-mark"></div>
-                <div class="parking-spacer"></div>
+                <div ng-class="{'marked': trip.flightInfo.parkingSpace == 1}" ng-click="trip.flightInfo.parkingSpace = 1" class="parking-mark"></div>
+                <div ng-class="{'marked': trip.flightInfo.parkingSpace == 2}" ng-click="trip.flightInfo.parkingSpace = 2" class="parking-mark"></div>
+                <div ng-class="{'marked': trip.flightInfo.parkingSpace == 3}" ng-click="trip.flightInfo.parkingSpace = 3" class="parking-mark"></div>
+                <div ng-class="{'marked': trip.flightInfo.parkingSpace == 4}" ng-click="trip.flightInfo.parkingSpace = 4" class="parking-spacer"></div>
                 <!--Row 2-->
-                <div onclick="" class="parking-mark"></div>
-                <div onclick="" class="parking-mark"></div>
-                <div onclick="" class="parking-mark"></div>
-                <div onclick="" class="parking-mark"></div>
-                <div onclick="" class="parking-mark"></div>
+                <div ng-class="{'marked': trip.flightInfo.parkingSpace == 5}" ng-click="trip.flightInfo.parkingSpace = 5" class="parking-mark"></div>
+                <div ng-class="{'marked': trip.flightInfo.parkingSpace == 6}" ng-click="trip.flightInfo.parkingSpace = 6" class="parking-mark"></div>
+                <div ng-class="{'marked': trip.flightInfo.parkingSpace == 7}" ng-click="trip.flightInfo.parkingSpace = 7" class="parking-mark"></div>
+                <div ng-class="{'marked': trip.flightInfo.parkingSpace == 8}" ng-click="trip.flightInfo.parkingSpace = 8" class="parking-mark"></div>
+                <div ng-class="{'marked': trip.flightInfo.parkingSpace == 9}" ng-click="trip.flightInfo.parkingSpace = 9" class="parking-mark"></div>
                 <!--Row 2-->
-                <div onclick="" class="parking-mark"></div>
-                <div onclick="" class="parking-mark"></div>
-                <div onclick="" class="parking-mark"></div>
-                <div onclick="" class="parking-mark"></div>
-                <div onclick="" class="parking-mark"></div>
+                <div  ng-class="{'marked': trip.flightInfo.parkingSpace == 10}" ng-click="trip.flightInfo.parkingSpace = 10" class="parking-mark"></div>
+                <div  ng-class="{'marked': trip.flightInfo.parkingSpace == 11}" ng-click="trip.flightInfo.parkingSpace = 11" class="parking-mark"></div>
+                <div  ng-class="{'marked': trip.flightInfo.parkingSpace == 12}" ng-click="trip.flightInfo.parkingSpace = 12" class="parking-mark"></div>
+                <div  ng-class="{'marked': trip.flightInfo.parkingSpace == 13}" ng-click="trip.flightInfo.parkingSpace = 13" class="parking-mark"></div>
+                <div  ng-class="{'marked': trip.flightInfo.parkingSpace == 14}" ng-click="trip.flightInfo.parkingSpace = 14" class="parking-mark"></div>
             </div>
         </div>
     </div>
