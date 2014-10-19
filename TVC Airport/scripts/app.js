@@ -1,7 +1,7 @@
 'use strict';
 angular.module('configuration', []);
 
-angular.module('tvcairport', ['ngRoute','ngAnimate','ngSanitize','configuration'])
+angular.module('tvcairport', ['ngRoute','ngAnimate','ngSanitize','angular-carousel','configuration'])
 .config(function ($routeProvider, $sceDelegateProvider) {
 	$routeProvider
 	.when('/', {

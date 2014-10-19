@@ -5,6 +5,7 @@
       "flightInfo":{
            "reservationNumber":"",
             "parkAirport": "",
+            "parkInfo":"",
             "parkingSpace":"" 
       },
       "departure":[
