@@ -1,40 +1,189 @@
 <div class="page-padding">
 	<div class="section">
-		<h2 class="trip-section-title">
-			<div style="background-position:-30px" class="title-img"></div>Flight Information
-		</h2>
-		<div class="flight-section">
-			<p><b>Did you park at TVC?</b>: Yes </p>
+		<div ng-show="checkTripInfo(trip.myTrip)">
+			<div flight-item="{{trip.myTrip.tripName}}">
+				Trip Name
+			</div>
+
 		</div>
-		<h2 class="trip-section-title">
-			<div style="background-position:-60px" class="title-img"></div>Departure Flight
-		</h2>
-		<div class="flight-section">
-			<p><b>None</b></p>
+		<div ng-show="checkTripInfo(trip.flightInfo)">
+			<hr/>
+			<h2 class="trip-section-title">
+				<div style="background-position:-30px" class="title-img"></div>Flight Information
+			</h2>
+			<div flight-item="{{trip.flightInfo.reservationNumber}}">
+				Reservation Number:
+			</div>
+			<div flight-item="{{trip.flightInfo.parkAirport}}">
+				Did you park at TVC?
+			</div>
+			<div flight-item="{{trip.flightInfo.parkInfo}}">
+				Where did you park?
+			</div>
+
+			<div class="parking-map-container" ng-show="trip.flightInfo.parkingSpace != ''">
+                <div class="parking-top"></div>
+                <!--Row 1-->
+                <div class="parking-spacer"></div>
+                <div ng-class="{'marked': trip.flightInfo.parkingSpace == 1}"  class="parking-mark"></div>
+                <div ng-class="{'marked': trip.flightInfo.parkingSpace == 2}"  class="parking-mark"></div>
+                <div ng-class="{'marked': trip.flightInfo.parkingSpace == 3}"  class="parking-mark"></div>
+                <div ng-class="{'marked': trip.flightInfo.parkingSpace == 4}"  class="parking-spacer"></div>
+                <!--Row 2-->
+                <div ng-class="{'marked': trip.flightInfo.parkingSpace == 5}"  class="parking-mark"></div>
+                <div ng-class="{'marked': trip.flightInfo.parkingSpace == 6}"  class="parking-mark"></div>
+                <div ng-class="{'marked': trip.flightInfo.parkingSpace == 7}"  class="parking-mark"></div>
+                <div ng-class="{'marked': trip.flightInfo.parkingSpace == 8}"  class="parking-mark"></div>
+                <div ng-class="{'marked': trip.flightInfo.parkingSpace == 9}"  class="parking-mark"></div>
+                <!--Row 2-->
+                <div  ng-class="{'marked': trip.flightInfo.parkingSpace == 10}"  class="parking-mark"></div>
+                <div  ng-class="{'marked': trip.flightInfo.parkingSpace == 11}"  class="parking-mark"></div>
+                <div  ng-class="{'marked': trip.flightInfo.parkingSpace == 12}"  class="parking-mark"></div>
+                <div  ng-class="{'marked': trip.flightInfo.parkingSpace == 13}"  class="parking-mark"></div>
+                <div  ng-class="{'marked': trip.flightInfo.parkingSpace == 14}"  class="parking-mark"></div>
+            </div>    
+        </div>
+        <div ng-show="checkTripInfo(trip.departure)">
+			<hr/>
+			<h2 class="trip-section-title">
+				<div style="background-position:-60px" class="title-img"></div>Departure Flight
+			</h2>
+			<div ng-repeat="d in trip.departure">
+				<hr ng-show="$index != 0"/>
+				<div flight-item="{{d.airline}}">
+					Airline Name:
+				</div>
+				<div flight-item="{{d.from}}">
+					Departing From:
+				</div>
+				<div flight-item="{{d.to}}">
+					Arriving To:
+				</div>
+				<div flight-item="{{d.date}}">
+					Flight Date:
+				</div>
+				<div flight-item="{{d.hour+':'+d.min+' '+d.ampm}}">
+					Flight Time:
+				</div>
+				<div flight-item="{{d.notes}}">
+					Notes:
+				</div>
+			</div>
+			
 		</div>
-		<h2 class="trip-section-title">
-			<div style="background-position:-90px" class="title-img"></div>Return Flight
-		</h2>
-		<div class="flight-section">
-			<p><b>None</b></p>
+		<div ng-show="checkTripInfo(trip.return)">
+			<hr/>
+			<h2 class="trip-section-title">
+				<div style="background-position:-90px" class="title-img"></div>Return Flight
+			</h2>
+			<div ng-repeat="d in trip.return">
+				<hr ng-show="$index != 0"/>
+				<div flight-item="{{d.airline}}">
+					Airline Name:
+				</div>
+				<div flight-item="{{d.from}}">
+					Departing From:
+				</div>
+				<div flight-item="{{d.to}}">
+					Arriving To:
+				</div>
+				<div flight-item="{{d.date}}">
+					Flight Date:
+				</div>
+				<div flight-item="{{d.hour+':'+d.min+' '+d.ampm}}">
+					Flight Time:
+				</div>
+				<div flight-item="{{d.notes}}">
+					Notes:
+				</div>
+			</div>
+			
 		</div>
-		<h2 class="trip-section-title">
-			<div style="background-position:-120px" class="title-img"></div>Rental Car
-		</h2>
-		<div class="flight-section">
-			<p><b>None</b></p>
+		<div ng-show="checkTripInfo(trip.car)">
+			<hr/>
+			<h2 class="trip-section-title">
+				<div style="background-position:-120px" class="title-img"></div>Rental Car
+			</h2>
+			<div ng-repeat="d in trip.car">
+				<hr ng-show="$index != 0"/>
+				<div flight-item="{{d.company}}">
+					Rental Company:
+				</div>
+				<div flight-item="{{d.phone}}">
+					Phone Number:
+				</div>
+				<div flight-item="{{d.confirmation}}">
+					Confirmation Number:
+				</div>
+				<div flight-item="{{d.pickUp}}">
+					Pick-Up Location:
+				</div>
+				<div flight-item="{{d.pickUpDate}}">
+					Pick-Up Date:
+				</div>
+				<div flight-item="{{d.pickUpHour+':'+d.pickUpMin+' '+d.pickUpAmPm}}">
+					Pick-Up Time:
+				</div>
+				<div flight-item="{{d.dropOff}}">
+					Drop-Off Location:
+				</div>
+				<div flight-item="{{d.dropOffDate}}">
+					Drop-Off Date:
+				</div>
+				<div flight-item="{{d.dropOffHour+':'+d.dropOffMin+' '+d.dropOffAmPm}}">
+					Drop-Off Time:
+				</div>
+				<div flight-item="{{d.notes}}">
+					Notes:
+				</div>
+			</div>
+			
 		</div>
-		<h2 class="trip-section-title">
-			<div style="background-position:-150px" class="title-img"></div>Lodging
-		</h2>
-		<div class="flight-section">
-			<p><b>None</b></p>
+		<div ng-show="checkTripInfo(trip.lodging)">
+			<hr/>
+			<h2 class="trip-section-title">
+				<div style="background-position:-150px" class="title-img"></div>Lodging
+			</h2>
+			<div ng-repeat="d in trip.lodging">
+				<hr ng-show="$index != 0"/>
+				<div flight-item="{{d.company}}">
+					Lodging Name:
+				</div>
+				<div flight-item="{{d.phone}}">
+					Phone Number:
+				</div>
+				<div flight-item="{{d.confirmation}}">
+					Confirmation Number:
+				</div>
+				<div flight-item="{{d.location}}">
+					Lodging Location:
+				</div>
+				<div flight-item="{{d.checkInDate}}">
+					Check-In Date:
+				</div>
+				<div flight-item="{{d.checkInHour+':'+d.checkInMin+' '+d.checkInAmPm}}">
+					Check-In Time:
+				</div>
+				<div flight-item="{{d.checkOutDate}}">
+					Check-Out Date:
+				</div>
+				<div flight-item="{{d.checkOutHour+':'+d.checkOutMin+' '+d.checkOutAmPm}}">
+					Check-Out Time:
+				</div>
+				<div flight-item="{{d.notes}}">
+					Notes:
+				</div>
+			</div>
+			
 		</div>
-		<h2 class="trip-section-title">
-			<div style="background-position:-180px" class="title-img"></div>Other Information
-		</h2>
-		<div class="flight-section">
-			<p><b>None</b></p>
+		<div ng-show="checkTripInfo(trip.other)">
+			<hr/>
+			<h2 class="trip-section-title">
+				<div style="background-position:-180px" class="title-img"></div>Other Information
+			</h2>
+			<div flight-item="{{trip.other.notes}}">
+				Notes:
+			</div>
 		</div>
 	</div>
 </div>

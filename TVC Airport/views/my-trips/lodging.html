@@ -14,39 +14,33 @@
             <input ng-model="d.confirmation" type="text" />
         </div>
         <div class="flight-section">
-            <p>Check-In Location</p>
+            <p>Lodging Location</p>
             <input ng-model="d.location" type="text" />
         </div>
         <div class="flight-section">
             <p>Check-In Date/Time</p>
             <input ng-model="d.checkInDate" type="text" />
-            <select ng-model="d.checkInHour" class="hour">
-                 <option value="">Hour</option>
-                 
+            <select ng-model="d.checkInHour" class="hour" ng-options="h for h in hour">
+                 <option value="" selected disabled>Hour</option>
             </select>
-            <select ng-model="d.checkInMin" class="min">
-                 <option value="">Min</option>
-                 
+            <select ng-model="d.checkInMin" class="min" ng-options="m for m in minute">
+                 <option value="" selected disabled>Minute</option>
             </select>
-            <select ng-model="d.checkInAmPm">
-            	<option value="">am/pm</option>
-                 <option value="am">am</option>                   
-                 <option value="pm">pm</option>
+            <select ng-model="d.checkInAmPm" ng-options="t for t in ampm">
+                <option value="" selectde disabled>am/pm</option>
             </select>
         </div>
         <div class="flight-section">
             <p>Check-Out Date/Time</p>
             <input ng-model="d.checkOutDate" type="text" />
-            <select ng-model="d.checkOutHour" class="hour">
-                 <option value="">Hour</option>
+            <select ng-model="d.checkOutHour" class="hour" ng-options="h for h in hour">
+                 <option value="" selected disabled>Hour</option>
             </select>
-            <select ng-model="d.checkOutMin" class="min">
-                 <option value="">Min</option>
+            <select ng-model="d.checkOutMin" class="min" ng-options="m for m in minute">
+                 <option value="" selected disabled>Minute</option>
             </select>
-            <select ng-model="d.checkOutAmPm">
-                <option value="">am/pm</option>
-                 <option value="am">am</option>                   
-                 <option value="pm">pm</option>
+            <select ng-model="d.checkOutAmPm" ng-options="t for t in ampm">
+                <option value="" selectde disabled>am/pm</option>
             </select>
         </div>
         <div class="flight-section">

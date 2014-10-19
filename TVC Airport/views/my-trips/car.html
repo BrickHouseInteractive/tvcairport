@@ -20,18 +20,14 @@
         <div class="flight-section">
             <p>Pick-Up Date/Time</p>
             <input ng-model="d.pickUpDate" type="text" />
-            <select ng-model="d.pickUpHour" class="hour">
-                 <option value="">Hour</option>
-                 
+            <select ng-model="d.pickUpHour" class="hour" ng-options="h for h in hour">
+                 <option value="" selected disabled>Hour</option>
             </select>
-            <select ng-model="d.pickUpMin" class="min">
-                 <option value="">Min</option>
-                 
+            <select ng-model="d.pickUpMin" class="min" ng-options="m for m in minute">
+                 <option value="" selected disabled>Minute</option>
             </select>
-            <select ng-model="d.pickUpAmPm">
-            	<option value="">am/pm</option>
-                 <option value="am">am</option>                   
-                 <option value="pm">pm</option>
+            <select ng-model="d.pickUpAmPm" ng-options="t for t in ampm">
+                <option value="" selectde disabled>am/pm</option>
             </select>
         </div>
         <div class="flight-section">
@@ -41,16 +37,14 @@
         <div class="flight-section">
             <p>Drop-Off Date/Time</p>
             <input ng-model="d.dropOffDate" type="text" />
-            <select ng-model="d.dropOffHour" class="hour">
-                 <option value="">Hour</option>
+           <select ng-model="d.dropOffHour" class="hour" ng-options="h for h in hour">
+                 <option value="" selected disabled>Hour</option>
             </select>
-            <select ng-model="d.dropOffMin" class="min">
-                 <option value="">Min</option>
+            <select ng-model="d.dropOffMin" class="min" ng-options="m for m in minute">
+                 <option value="" selected disabled>Minute</option>
             </select>
-            <select ng-model="d.dropOffAmPm">
-                <option value="">am/pm</option>
-                 <option value="am">am</option>                   
-                 <option value="pm">pm</option>
+            <select ng-model="d.dropOffAmPm" ng-options="t for t in ampm">
+                <option value="" selectde disabled>am/pm</option>
             </select>
         </div>
         <div class="flight-section">

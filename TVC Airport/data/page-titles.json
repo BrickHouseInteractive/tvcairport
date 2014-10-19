@@ -52,7 +52,10 @@
 		"title":"Parking Map & Rates",
 		"menu":"info"
 	},
-
+	"/info/photo-gallery":{
+		"title":"Photo Gallery",
+		"menu":"info"
+	},
 	"/my-trips":{
 		"title":"My Trips",
 		"menu":"my-trips"
@@ -83,6 +86,10 @@
 	},
 	"/my-trips/other":{
 		"title":"Other Information",
+		"menu":"my-trips"
+	},
+	"/trip-sum":{
+		"title":"My Trip",
 		"menu":"my-trips"
 	}
 }

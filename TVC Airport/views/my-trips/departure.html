@@ -17,18 +17,14 @@
         <div class="flight-section">
             <p>Flight Date/Time</p>
             <input ng-model="d.date" type="text" />
-            <select ng-model="d.hour" class="hour">
-                 <option value="">Hour</option>
-                 
+            <select ng-model="d.hour" class="hour" ng-options="h for h in hour">
+                 <option value="" selected disabled>Hour</option>
             </select>
-            <select ng-model="d.min" class="min">
-                 <option value="">Min</option>
-                 
+            <select ng-model="d.min" class="min" ng-options="m for m in minute">
+                 <option value="" selected disabled>Minute</option>
             </select>
-            <select ng-model="d.ampm">
-            	<option value="">am/pm</option>
-                 <option value="am">am</option>                   
-                 <option value="pm">pm</option>
+            <select ng-model="d.ampm" ng-options="t for t in ampm">
+            	<option value="" selectde disabled>am/pm</option>
             </select>
         </div>
         <div class="flight-section">

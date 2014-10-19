@@ -17,6 +17,7 @@ body{
 	margin:0;
 	padding:0;
 	color:#666;
+    background:#fff;
 }
 	
 h2, h3{
@@ -330,6 +331,12 @@ iframe{
 }
 .hidden, .offline-notification{
 	display:none;
+}
+ul[rn-carousel]{
+    overflow:initial;
+}
+.gallery-photo{
+    width:100%;
 }
 @media (max-width: 640px){
     h1{

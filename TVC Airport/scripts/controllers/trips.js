@@ -8,6 +8,11 @@ angular.module('tvcairport').controller('TripsCtrl', ['$scope','$rootScope','$ro
         $scope.trip = MyTrips.trip;
         $scope.showDelete = false;
         $scope.deleteTripObject = null;
+        $scope.hour = [];
+        $scope.minute = [];
+        $scope.ampm = ["am","pm"];
+
+        console.log($scope.trip)
         
 
         //---Functions--//
@@ -70,15 +75,44 @@ angular.module('tvcairport').controller('TripsCtrl', ['$scope','$rootScope','$ro
         } 
 
         $scope.viewTripSum = function(trip){
-            MyTrips.trip = trip;
+            MyTrips.trip = trip.data;
             $location.path("trip-sum");
-        }     
+        } 
+
+        $scope.checkTripInfo = function(section){
+            var showSection = false
+            if(section instanceof Array){
+                angular.forEach(section, function(subSec, key){
+                    angular.forEach(subSec, function(item, key){
+                        if(item != "" && key != '$$hashKey') showSection = true;
+                    })
+                })
+            }else{
+                angular.forEach(section,function(item){
+                    if(item != "") showSection = true;
+                })
+            }
+            return showSection;
+        }    
 
         //------Init-----//
         getTrips();
 
         if(Object.keys(MyTrips.trip).length == 0){
             $location.path("/my-trips");
+        }
+
+        for(i=1;i<=12;i++){
+            $scope.hour.push(i);
+        }
+
+        for(i=1;i<=60;i++){
+            if(i < 10){
+                $scope.minute.push("0"+i);
+            }else{
+                $scope.minute.push(i);
+            }
+            
         }
     }
 ])
