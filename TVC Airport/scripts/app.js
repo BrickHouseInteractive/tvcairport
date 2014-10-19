@@ -42,3 +42,7 @@ angular.module('tvcairport', ['ngRoute','ngAnimate','ngSanitize','configuration'
 window.addEventListener('load', function(){
     FastClick.attach(document.body);
 }, false);
+
+$(document).ready(function(){
+  $("body").height(window.innerHeight);  
+})
