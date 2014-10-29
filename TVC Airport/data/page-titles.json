@@ -1,8 +1,4 @@
 {
-	"/":{
-		"title":"Home",
-		"menu":"home"
-	},
 	"/flights":{
 		"title":"Flights",
 		"menu":"flights"
@@ -91,5 +87,9 @@
 	"/trip-sum":{
 		"title":"My Trip",
 		"menu":"my-trips"
+	},
+	"/network-error":{
+		"title":"Network Error",
+		"menu":"flights"
 	}
 }

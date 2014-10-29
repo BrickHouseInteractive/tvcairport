@@ -25,6 +25,8 @@ angular.module('tvcairport', ['ngRoute','ngAnimate','ngSanitize','angular-carous
 	}).when('/trip-sum', {
 		templateUrl: 'views/trip-sum.html',
 		controller: 'TripsCtrl'
+	}).when('/network-error', {
+		templateUrl: 'views/network-error.html'
 	}).otherwise({
 		redirectTo: '/'
 	})
@@ -42,3 +44,7 @@ angular.module('tvcairport', ['ngRoute','ngAnimate','ngSanitize','angular-carous
 window.addEventListener('load', function(){
     FastClick.attach(document.body);
 }, false);
+
+$(document).ready(function(){
+  $("body").height(window.innerHeight);  
+})

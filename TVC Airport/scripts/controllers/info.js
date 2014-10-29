@@ -3,17 +3,33 @@ angular.module('tvcairport').controller('InfoCtrl', ['$scope','$rootScope','$rou
 		
 		//------Vars-----//
     	$scope.infoPage = "";
+        $scope.imageHeight = window.innerHeight - document.getElementById("title-container").offsetHeight;
         $scope.images = [
-            "img/gallery/acme-reeds_2176.jpg",
-            "img/gallery/beach-base-peninsula_2088.jpg",
-            "img/gallery/beach-morning-old-mis-pen_1628.jpg",
-            "img/gallery/beach-old-mis-pen_1684.jpg",
-            "img/gallery/beach_2158.jpg",
-            "img/gallery/bowers-harbor_2008.jpg",
-            "img/gallery/church-old-mis-pen_1657.jpg",
-            "img/gallery/dock-boats-old-mis_1621.jpg",
-            "img/gallery/east-bay-water-sky_2232.jpg",
-            "img/gallery/hillside-cram-rd_7098.jpg"
+            "boats-suttons-bay-harbor",
+            "sleeping -bear-dunes",
+            "gaylord-golf-course",
+            "boat-bowers-harbor",
+            "boats-anchored-omena",
+            "good-bar-beach",
+            "boats-west-bay",
+            "bowers-harbor-boats",
+            "crystal-river",
+            "east-bay-grasses",
+            "fall-boyne-valley",
+            "glen-arbor-beach",
+            "glen-little-glen-lake",
+            "grand-traverse-lighthouse",
+            "hillside-williamsburg",
+            "kayaks-old-mission-pen",
+            "old-miss-lighthouse",
+            "boats-dock-old-mission-pen",
+            "old-mission-pen",
+            "river-lake-leelanau",
+            "sand-lakes-trail",
+            "sleeping-bear-dunes-hill-climb",
+            "suttons-bay-marina-sunrise",
+            "vineyard-old-mission-pen",
+            "acme-forest"
         ]
 
     	//---Functions--//
