@@ -9,7 +9,7 @@ angular.module('tvcairport').controller('MainCtrl', ['$scope','$rootScope','$loc
     	$scope.setPageInfo = function(){
     		$scope.showTitle = $location.path() != "/" && $location.path() != "";
     		console.log("route: " + $location.path());
-			if($scope.pageData){
+			if($scope.showTitle && $scope.pageData){
 				if($scope.showTitle) $scope.pageTitle = $scope.pageData[$location.path()].title;
 				$scope.menuItem = $scope.pageData[$location.path()].menu;
 			}
@@ -25,6 +25,13 @@ angular.module('tvcairport').controller('MainCtrl', ['$scope','$rootScope','$loc
     	
     	$scope.$on('$routeChangeStart', function(next, current) { 
 			$scope.setPageInfo()
+    	})
+        
+        $scope.$on('$locationChangeStart', function(event, next, current) { 
+            if(next.indexOf("frame/") != -1 && !navigator.onLine){
+                //event.preventDefault();
+                $location.path("/network-error")
+            }
     	})
 
     	$http.get('data/page-titles.json').

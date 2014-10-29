@@ -25,6 +25,8 @@ angular.module('tvcairport', ['ngRoute','ngAnimate','ngSanitize','angular-carous
 	}).when('/trip-sum', {
 		templateUrl: 'views/trip-sum.html',
 		controller: 'TripsCtrl'
+	}).when('/network-error', {
+		templateUrl: 'views/network-error.html'
 	}).otherwise({
 		redirectTo: '/'
 	})
