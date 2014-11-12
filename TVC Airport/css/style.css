@@ -199,8 +199,11 @@ hr{
 .flight-section input[type="radio"]{
     width:20px;
 }
+input[type="radio"]{
+    margin:0;
+}
 label{
-    margin-right:10px;
+    margin-right:20px;
 }
 .flight-section textarea{
 	min-height:100px;
@@ -437,6 +440,10 @@ ul[rn-carousel] li{
     }
     .icon-right{
         width:35px;
+    }
+    .parking-map-container{
+        width:600px;
+        height:600px;
     }
 }
 #back-button{

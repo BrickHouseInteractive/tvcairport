@@ -8,8 +8,8 @@
         
         <div class="flight-section">
             <p>Did you park at TVC?</p>
-            <input id="parking-no"  type="radio" value="Yes" ng-model="trip.flightInfo.parkAirport" ng-click="trip.flightInfo.parkInfo = ''"/><label for="parking-yes"> Yes</label>
-            <input id="parking-yes"  type="radio" value="No" ng-model="trip.flightInfo.parkAirport" ng-click="trip.flightInfo.parkingSpace = ''"/><label for="parking-no"> No</label> 
+            <input id="parking-yes"  type="radio" value="Yes" ng-model="trip.flightInfo.parkAirport" ng-click="trip.flightInfo.parkInfo = ''"/><label for="parking-yes"> Yes</label>
+            <input id="parking-no"  type="radio" value="No" ng-model="trip.flightInfo.parkAirport" ng-click="trip.flightInfo.parkingSpace = ''"/><label for="parking-no"> No</label> 
         </div>
         <div ng-show="trip.flightInfo.parkAirport == 'No'" class="flight-section">
             <p>Where did you park?</p>

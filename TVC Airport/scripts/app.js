@@ -4,7 +4,7 @@ angular.module('configuration', []);
 angular.module('tvcairport', ['ngRoute','ngAnimate','ngSanitize','angular-carousel','configuration'])
 .config(function ($routeProvider, $sceDelegateProvider) {
 	$routeProvider
-	.when('/', {
+	.when('/home', {
 		templateUrl: 'views/home.html'
 	}).when('/info', {
 		templateUrl: 'views/info-menu.html'
@@ -28,7 +28,7 @@ angular.module('tvcairport', ['ngRoute','ngAnimate','ngSanitize','angular-carous
 	}).when('/network-error', {
 		templateUrl: 'views/network-error.html'
 	}).otherwise({
-		redirectTo: '/'
+		redirectTo: '/home'
 	})
 
 	$sceDelegateProvider.resourceUrlWhitelist([
@@ -48,3 +48,10 @@ window.addEventListener('load', function(){
 $(document).ready(function(){
   $("body").height(window.innerHeight);  
 })
+
+document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
+    setTimeout(function(){
+      navigator.splashscreen.hide();  
+    },400)
+}
