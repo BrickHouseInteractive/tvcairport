@@ -338,10 +338,22 @@ ul[rn-carousel]{
 }
 ul[rn-carousel] li{
     position:fixed;
+    height: auto;
 }
 .gallery-photo{
     width:100%;
     background-size:100% auto;
+}
+.gallery-description{
+    position:absolute;
+    padding:10px 15px;
+    text-align: right;
+    color: #fff;
+    background: rgba(0,0,0,0.5);
+    width:100%;
+    bottom:5px;
+    left:0;
+    font-size:0.9em;
 }
 @media (max-width: 640px){
     h1{

@@ -1,3 +1,6 @@
 <ul rn-carousel rn-carousel-buffered="3" class="carousel">
-    <li ng-repeat="i in images"><img style="height:{{imageHeight}}px"  class="gallery-photo" ng-src="img/gallery/{{i}}.jpg"/></li>
+    <li ng-repeat="i in images">
+        <img style="height:{{imageHeight}}px"  class="gallery-photo" ng-src="img/gallery/{{i.src}}.jpg"/>
+        <div class="gallery-description">{{i.description}}</div>
+    </li>
 </ul>

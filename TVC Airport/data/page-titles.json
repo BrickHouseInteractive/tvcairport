@@ -27,7 +27,6 @@
 		"menu":"flights",
 		"url":"http://fvmobile.flightview.com/tvcairport/TrackByRoute.aspx"
 	},
-
 	"/info":{
 		"title":"Information",
 		"menu":"info"

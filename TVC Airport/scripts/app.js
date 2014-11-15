@@ -13,7 +13,7 @@ angular.module('tvcairport', ['ngRoute','ngAnimate','ngSanitize','angular-carous
 		controller: 'InfoCtrl'
 	}).when('/flights', {
 		templateUrl: 'views/flights-menu.html'
-	}).when('/frame/:frame', {
+    }).when('/frame/:frame', {
 		templateUrl: 'views/frame.html',
 		controller: 'FrameCtrl'
 	}).when('/my-trips', {
@@ -34,6 +34,7 @@ angular.module('tvcairport', ['ngRoute','ngAnimate','ngSanitize','angular-carous
 	$sceDelegateProvider.resourceUrlWhitelist([
 	    'self',
 	    'http://fvmobile.flightview.com/**',
+        'https://tvc.swifttrip.com/**',
 	    'https://www.google.com/maps/**'
 	])
 })
@@ -53,5 +54,5 @@ document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
     setTimeout(function(){
       navigator.splashscreen.hide();  
-    },400)
+    },2000)
 }

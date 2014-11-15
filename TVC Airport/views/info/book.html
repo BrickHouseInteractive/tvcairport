@@ -1,0 +1,54 @@
+<link href="https://cdn.jsdelivr.net/jquery.pickadate.js/3.1.4/themes/default.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/jquery.pickadate.js/3.1.4/themes/default.date.css" rel="stylesheet"/>
+<div class="page-padding">
+    <div id="qbt"></div>
+</div>
+ <!--SwiftTrips JS-->
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.pickadate.js/3.1.4/picker.js"></script>
+<script src"https://cdn.jsdelivr.net/jquery.pickadate.js/3.1.4/picker.date.js"></script>
+<script src="https://static.swifttrip.com/tools/qbt/scripts/jquery.modern.responsive.qbt.js"></script> 
+<script>
+$(document).ready(function(){
+  var customText = {
+    flightTabText: "Air",
+    flightTypeLabel: "Flight Type:",
+    flightOriginLabel:"From:",
+    flightDepartLabel: "Departing:",
+    flightDepartTimeLabel: "Time:",
+    flightDestinationLabel: "To:",
+    flightReturnLabel: "Return:",
+    flightReturnTimeLabel: "Time:",
+    flightSearchBtn: "Search for Flights",
+    hotelTabText: "Hotels",
+    hotelSearchBtn: "Search for Hotels",
+    carTabText: "Cars",
+    carSearchBtn: "Search for Cars",
+    cruiseTabText: "Cruises",
+    cruiseSearchBtn: "Search for Cruises",
+    vacationTabText: "Vacations",
+    vacationSearchBtn: "Search for Vacations",
+    advancedSearchText: "",
+    cruiseMessage: "",
+    vacationMessage: "",
+    flightTerms: "",
+    hotelTerms: "",
+    carTerms: "",
+    vacationTerms: "",
+    cruiseTerms: ""
+  };
+  $("#qbt").qbt({
+    target: "qbt",
+    ag: 195,
+    prefix: "",
+    secureSite: "https://tvc.swifttrip.com/",
+    tiSite: "RBDIRECT",
+    format: "modern",
+    startTab: "flight",
+    cruise: false,
+    vacation: false,
+    cruiseMessage: false,
+    vacationMessage: false
+  }, customText);
+});
+</script>  

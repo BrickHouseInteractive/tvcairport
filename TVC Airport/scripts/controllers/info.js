@@ -3,48 +3,121 @@ angular.module('tvcairport').controller('InfoCtrl', ['$scope','$rootScope','$rou
 		
 		//------Vars-----//
     	$scope.infoPage = "";
-        $scope.imageHeight = window.innerHeight - document.getElementById("title-container").offsetHeight;
+        $scope.imageHeight = window.innerHeight - document.getElementById("title-container").offsetHeight-document.getElementById("menu").offsetHeight;
+       
         $scope.images = [
-            "boats-suttons-bay-harbor",
-            "sleeping -bear-dunes",
-            "gaylord-golf-course",
-            "boat-bowers-harbor",
-            "boats-anchored-omena",
-            "good-bar-beach",
-            "boats-west-bay",
-            "bowers-harbor-boats",
-            "crystal-river",
-            "east-bay-grasses",
-            "fall-boyne-valley",
-            "glen-arbor-beach",
-            "glen-little-glen-lake",
-            "grand-traverse-lighthouse",
-            "hillside-williamsburg",
-            "kayaks-old-mission-pen",
-            "old-miss-lighthouse",
-            "boats-dock-old-mission-pen",
-            "old-mission-pen",
-            "river-lake-leelanau",
-            "sand-lakes-trail",
-            "sleeping-bear-dunes-hill-climb",
-            "suttons-bay-marina-sunrise",
-            "vineyard-old-mission-pen",
-            "acme-forest"
+            {
+                "src":"boats-suttons-bay-harbor",
+                "description":"Suttons Bay boat harbor"
+            },
+            {
+                "src":"sleeping-bear-dunes",
+                "description":"Sleeping Bear Dunes"
+            },
+            {
+                "src":"gaylord-golf-course",
+                "description":"Gaylord golf course"
+            },
+            {
+                "src":"boat-bowers-harbor",
+                "description":"Bowers Harbor"
+            },
+            {
+                "src":"boats-anchored-omena",
+                "description":"Boats in East Bay"
+            },
+            {
+                "src":"good-bar-beach",
+                "description":"View over North Bar Lake"
+            },
+            {
+                "src":"boats-west-bay",
+                "description":"Sailboats in West Bay"
+            },
+            {
+                "src":"bowers-harbor-boats",
+                "description":"Bowers Harbor"
+            },
+            {
+                "src":"crystal-river",
+                "description":"Crystal River"
+            },
+            {
+                "src":"east-bay-grasses",
+                "description":"East Bay from Acme"
+            },
+            {
+                "src":"fall-boyne-valley",
+                "description":"Hills near Boyne City"
+            },
+            {
+                "src":"glen-arbor-beach",
+                "description":"Leelanau Peninsula beach"
+            },
+            {
+                "src":"glen-little-glen-lake",
+                "description":"Little Glen Lake and Glen Lake"
+            },
+            {
+                "src":"grand-traverse-lighthouse",
+                "description":"Grand Traverse Lighthouse"
+            },
+            {
+                "src":"hillside-williamsburg",
+                "description":"Fall in Antrim County"
+            },
+            {
+                "src":"kayaks-old-mission-pen",
+                "description":"Kayaking on West Bay"
+            },
+            {
+                "src":"old-miss-lighthouse",
+                "description":"Mission Point Lighthouse"
+            },
+            {
+                "src":"boats-dock-old-mission-pen",
+                "description":"Boat dock on West Bay"
+            },
+            {
+                "src":"old-mission-pen",
+                "description":"Boats on Old Mission Peninsula"
+            },
+            {
+                "src":"river-lake-leelanau",
+                "description":"Lake Leelanau narrows"
+            },
+            {
+                "src":"sand-lakes-trail",
+                "description":"Sand Lakes Quiet Area trail"
+            },
+            {
+                "src":"sleeping-bear-dunes-hill-climb",
+                "description":"Sleeping Bear Dunes"
+            },
+            {
+                "src":"suttons-bay-marina-sunrise",
+                "description":"Suttons Bay"
+            },
+            {
+                "src":"vineyard-old-mission-pen",
+                "description":"Old Mission Peninsula vineyard"
+            },
+            {
+                "src":"acme-forest",
+                "description":"Forest in Williamsburg"
+            }
         ]
 
     	//---Functions--//
 
 
     	//------Init-----//
-    	console.log($routeParams);
     	$scope.infoPage = "views/info/" + $routeParams.page + ".html";
     	
     	
     	$timeout(function(){
-    		console.log("test")
     		var phoneNumbers = $(".phone");
     		$.each(phoneNumbers, function(index,value){
-				console.log(value);
 				var origNumber = $(value).text();
 				var strippedNumber = origNumber.replace(/\D/g,'');
 				$(value).html("<a href='tel:"+strippedNumber+"'>"+origNumber+"</a>");
