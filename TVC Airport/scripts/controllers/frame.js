@@ -10,5 +10,6 @@ angular.module('tvcairport').controller('FrameCtrl', ['$scope','$rootScope','$lo
 
     	//------Init-----//
     	$scope.frameUrl = $scope.pageData[$location.path()].url;
+        $scope.frameText = $scope.pageData[$location.path()].text;
 	}
 ])

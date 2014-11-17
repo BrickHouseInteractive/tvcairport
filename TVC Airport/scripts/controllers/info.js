@@ -28,7 +28,7 @@ angular.module('tvcairport').controller('InfoCtrl', ['$scope','$rootScope','$rou
             },
             {
                 "src":"good-bar-beach",
-                "description":"View over North Bar Lake"
+                "description":"Lake Michigan near North Bar Lake"
             },
             {
                 "src":"boats-west-bay",

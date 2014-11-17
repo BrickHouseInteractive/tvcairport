@@ -323,12 +323,13 @@ iframe{
     float:left
 }
 .parking-top{
-    height:36%;
+    height:34%;
     width:100%;
     float:left
 }
 .marked{
     background:url(../img/map-marker.png) center center no-repeat;
+    background-size:80% auto;
 }
 .hidden, .offline-notification{
 	display:none;

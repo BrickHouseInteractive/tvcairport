@@ -1,8 +1,9 @@
+<form id="departure">
 <div class="center section">
     <div ng-repeat="d in trip.departure" class="flight-leg">
         <hr ng-show="$index != 0"/>
         <div class="flight-section">
-            <p>Airline Name <span ng-click="removeTripSection('departure', $index)" ng-show="$index != 0" class="icon-right delete-section">X</span></p>
+            <p>Departure Airline Name <span ng-click="removeTripSection('departure', $index)" ng-show="$index != 0" class="icon-right delete-section">X</span></p>
             <input ng-model="d.airline" type="text" />
         </div>
          <div class="flight-section">
@@ -15,8 +16,11 @@
 
         </div>
         <div class="flight-section">
-            <p>Flight Date/Time</p>
+            <p> Departure Flight Date</p>
             <input ng-model="d.date" type="text" />
+        </div>
+        <div class="flight-section">
+            <p> Departure Flight Time</p>
             <select ng-model="d.hour" class="hour" ng-options="h for h in hour">
                  <option value="" selected disabled>Hour</option>
             </select>
@@ -38,3 +42,4 @@
 <div class="center section">
 	<a href="#my-trips/return" ng-click="saveTrip()"><button class="save">Next</button></a>
 </div>
+    </form>
