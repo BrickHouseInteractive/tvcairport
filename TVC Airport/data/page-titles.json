@@ -10,12 +10,14 @@
 	"/frame/arrivals":{
 		"title":"Arrivals",
 		"menu":"flights",
-		"url":"http://fvmobile.flightview.com/tvcairport/FidsArrival.aspx"
+		"url":"http://fvmobile.flightview.com/tvcairport/FidsArrival.aspx",
+        "text": "Click on a flight for more details."
 	},
 	"/frame/departures":{
 		"title":"Departures",
 		"menu":"flights",
-		"url":"http://fvmobile.flightview.com/tvcairport/FidsDeparture.aspx"
+		"url":"http://fvmobile.flightview.com/tvcairport/FidsDeparture.aspx",
+        "text": "Click on a flight for more details."
 	},
 	"/frame/flight":{
 		"title":"Track by Flight",
@@ -41,6 +43,10 @@
 	},
 	"/info/ground-transport":{
 		"title":"Ground Transportation",
+		"menu":"info"
+	},
+    "/info/rentals":{
+		"title":"Rental Cars",
 		"menu":"info"
 	},
 	"/info/security":{
