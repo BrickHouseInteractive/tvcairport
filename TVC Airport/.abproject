@@ -1,13 +1,13 @@
 {
   "ProjectName": "TVC Airport",
   "ProjectGuid": "40525b44-87a2-454e-928e-e0b9a2c7c7ae",
-  "projectVersion": 1,
+  "projectVersion": 2.0,
   "AppIdentifier": "com.tvcairport",
   "DisplayName": "TVC Airport",
   "Author": "Brick House Interactive",
   "Description": "TVC Airport",
   "BundleVersion": "1.0",
-  "AndroidVersionCode": "1",
+  "AndroidVersionCode": "6",
   "iOSDeviceFamily": [
     "1",
     "2"
