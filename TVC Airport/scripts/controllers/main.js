@@ -10,8 +10,8 @@ angular.module('tvcairport').controller('MainCtrl', ['$scope','$rootScope','$loc
     		$scope.showTitle = $location.path() != "/home";
 			if($scope.showTitle && $scope.pageData){
 				if($scope.showTitle) $scope.pageTitle = $scope.pageData[$location.path()].title;
-				$scope.menuItem = $scope.pageData[$location.path()].menu;
 			}
+            $scope.menuItem = $scope.pageData[$location.path()].menu;
     	}
 
     	$scope.back = function(){
