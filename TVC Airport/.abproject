@@ -6,8 +6,8 @@
   "DisplayName": "TVC Airport",
   "Author": "Brick House Interactive",
   "Description": "TVC Airport",
-  "BundleVersion": "8.0",
-  "AndroidVersionCode": "8",
+  "BundleVersion": "9.0",
+  "AndroidVersionCode": "9",
   "iOSDeviceFamily": [
     "1",
     "2"
