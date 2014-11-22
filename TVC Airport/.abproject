@@ -36,7 +36,7 @@
     "Portrait"
   ],
   "AndroidHardwareAcceleration": "true",
-  "iOSStatusBarStyle": "BlackOpaque",
+  "iOSStatusBarStyle": "Hidden",
   "WP8SupportedResolutions": [
     "ID_RESOLUTION_WVGA",
     "ID_RESOLUTION_WXGA",
