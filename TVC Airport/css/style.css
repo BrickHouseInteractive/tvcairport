@@ -460,9 +460,9 @@ ul[rn-carousel] li{
     }
 }
 #back-button{
-    padding:0 0 0 5px;
+    padding:0;
     position:absolute;
-    top:6px;
+    top:0;
     left:0;
     height:100%
 }
